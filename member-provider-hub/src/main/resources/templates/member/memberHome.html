@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Member-provider-hub</title>  
+<link rel="stylesheet" type="text/css" th:href="@{/css/memberHome.css}"/>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+<style>
+  .btnwidth{
+ 
+width:350px !important;
+border-radius: 25px !important;
+}
+</style>
+
+</head>
+<body>
+<div class="navigation">
+	
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li  style="float:right"><a th:href="@{/logout}">Sign out</a></li>
+ 
+</ul>
+  	
+  	
+  	</div>
+  	<div class="container">
+  	<div class="row">
+  <div class="col-sm-3 col-sm-offset-3"></div>
+			<div class="col-sm-6 col-sm-offset-3">
+			<center>
+			<img th:src="@{/images/logo.jpg}" class="img-responsive center-block" width="80%" alt="Logo"/>
+			 </center>
+			</div>
+  <div class="col-sm-3 col-sm-offset-3"></div>
+ </div>
+ <div class="row">
+  	<div class="col-md-3"></div>
+	     <div class="col-md-6 col-md-offset-3 text-center">
+	      <div class="col-md- text-center my-3">
+	         <!-- button classes -->
+	         <button role="button" class="btn  btn-outline-primary btn-lg btn-iconed btn-rounded btnwidth">
+	            <span class="spn"> Get Provider Information</span>
+	         </button>   
+	      </div>
+	  
+
+	  
+	      <div class="col-md- text-center my-3">
+	         <!-- button classes -->
+	         <button role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded btnwidth">
+	           <span class="spn">Get nearby pharmacy locations</span>
+	         </button>  
+	      </div>
+	  
+
+	  
+	      <div class="col-md- text-center my-3">
+	         <!-- button classes -->
+	         <button role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded btnwidth">
+	           <span class="spn">Check insurance coverages</span>
+	         </button>   
+	      </div>
+
+
+	  
+	      <div class="col-md- text-center my-3">
+	         <!-- button classes -->
+	         <button role="button" class="btn btn-outline-primary btn-lg btn-iconed btn-rounded btnwidth">
+	           <span class="spn">Patient Registration System</span>
+	         </button>  
+	      </div>
+	    </div>
+	<div class="col-md-3"></div>
+</div>
+     </div>
+  
+</body>
+</html>

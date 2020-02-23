@@ -1,0 +1,38 @@
+.card-deck{
+		padding-top: 70px;
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	img{
+		padding-top: 30px;
+		
+	}
+	
+	
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #007bff;
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 35px;
+  text-decoration: none;
+}
+
+.navigation li a:hover:not(.active) {
+  background-color: #e258a9;
+}
+
+.navigation .active {
+  background-color: #e258a9;
+}

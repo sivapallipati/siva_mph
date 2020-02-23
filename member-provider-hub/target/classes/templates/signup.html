@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+<head>
+ <title>Member-provider-hub</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/signup.css}"/>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<div class="container">
+ <div class="row">
+  <div class="col-sm-3 col-sm-offset-3"></div>
+			<div class="col-sm-6 col-sm-offset-3 logo1">
+			<center>
+			 <img th:src="@{/images/logo.jpg}" class="img-responsive center-block" width="80%"  alt="Logo"/>
+			 </center>
+			</div>
+  <div class="col-sm-3 col-sm-offset-3"></div>
+ </div>
+    
+    <div class="row">
+    <div class="col-sm-4 col-sm-offset-3"></div>
+			<div class="col-sm-4 col-sm-offset-3">
+ 
+		        <form class="form-horizontal" role="form" method="POST" th:action="@{/signup}" th:object="${user}">
+		        <div class="row">
+             
+              <div class="col-md-3"></div>
+         </div>
+		       <div class="form-group">   
+			       <label for="firstname" class="sr-only">First Name</label>
+			        <input type="text" th:field="*{firstname}" class="form-control" id="firstname"
+                                placeholder="First Name" required autofocus>
+			    </div>
+			       
+			       
+			   <div class="form-group">   
+			       <label for="lastname" class="sr-only">Last Name</label>
+			       <input type="text" th:field="*{lastname}" class="form-control" id="lastname"
+                                placeholder="Last name" required autofocus>
+			       
+		       </div>
+		
+		 
+		
+	
+		
+		 <div class="form-group">   
+			       <label for="email" class="sr-only">Email</label>
+			      <input type="email" th:field="*{email}" class="form-control" id="email"
+                                placeholder="@mail.com" required autofocus>
+                                
+                   <div class="form-control-feedback">
+                         <span class="text-danger align-middle" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+                         </span>
+                 </div>
+		       </div>
+		
+		
+		       <div class="form-group">   
+			       <label for="password" class="sr-only">Password</label>
+			    	 <input type="password" th:field="*{password}" class="form-control" id="password"
+                                placeholder="Password" required>
+			       
+			       <span class="text-danger align-middle" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">
+                         </span>
+		       </div>
+		
+		      
+             
+              <div class="alert alert-success" role="alert" th:if="${msg}" th:utext="${msg}"> </div>
+		
+			
+			  
+		       <div class="form-group">
+						<button type="submit" class="btn btn-success">Register</button>
+						<span>Already Registered? <a href="/" th:href="@{/login}">Sign in
+								here</a></span>
+					</div>
+		       
+		       
+		       
+		       </form>
+		  
+    </div>
+     <div class="col-sm-4 col-sm-offset-3"></div>
+  </div>
+</div>
+
+</body>
+</html>
